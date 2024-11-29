@@ -1,0 +1,20 @@
+.mainContainer {
+    border: 1px solid red;
+    padding: 20px;
+    max-width: 1840px;
+    margin: 0 auto;
+}
+
+.mainContainer div {
+    margin: 20px auto;
+}
+
+@media (min-width: 769px) {
+
+    .mainContainer > div {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+}
+

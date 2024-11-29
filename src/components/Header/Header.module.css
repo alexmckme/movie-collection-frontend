@@ -1,0 +1,19 @@
+.header {
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    box-shadow: rgba(166, 166, 166, 0.4) 0px 8px 24px;
+    padding: 5px 10px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header img:nth-child(1) {
+    padding: 5px;
+}
+
+.header img:nth-child(2) {
+    cursor: pointer;
+}
