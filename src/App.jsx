@@ -6,7 +6,8 @@ import React from "react";
 import Pagination from "./components/Pagination/index.js";
 import LoadingSpinner from "./components/LoadingSpinner/index.js";
 
-
+// If running the backend locally, change the port accordingly
+const PORT = 3000;
 
 async function fetcher(endpoint) {
     const response = await fetch(endpoint);
@@ -24,7 +25,8 @@ function App() {
     const [currentLanguage, setCurrentLanguage] = React.useState("en-US");
     const [currentPopularMoviesPage, setCurrentPopularMoviesPage] = React.useState(1);
 
-    const ENDPOINT = `http://localhost:${process.env.PORT || 3000}/api/v1/movies/popular?language=${currentLanguage}&page=${currentPopularMoviesPage}`
+
+    const ENDPOINT = `http://localhost:${PORT}/api/v1/movies/popular?language=${currentLanguage}&page=${currentPopularMoviesPage}`
 
     const {data, isLoading, error} = useSWR(ENDPOINT, fetcher)
 
